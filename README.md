@@ -24,3 +24,8 @@ graph build
 ```
 graph auth --studio {KEY}
 ```
+
+## Depoly to the graph
+```
+graph deploy --studio tstnftmarket
+```
