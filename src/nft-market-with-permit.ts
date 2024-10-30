@@ -3,12 +3,12 @@ import {
   NFTSold as NFTSoldEvent,
 } from "../generated/NFTMarketWithPermit/NFTMarketWithPermit"
 import {
-  NFTListed,
-  NFTSold
+  OrderBook,
+  FilledOrder
 } from "../generated/schema"
 
 export function handleNFTListed(event: NFTListedEvent): void {
-  let entity = new NFTListed(
+  let entity = new OrderBook(
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.tokenId = event.params.tokenId
@@ -23,7 +23,7 @@ export function handleNFTListed(event: NFTListedEvent): void {
 }
 
 export function handleNFTSold(event: NFTSoldEvent): void {
-  let entity = new NFTSold(
+  let entity = new FilledOrder(
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.tokenId = event.params.tokenId

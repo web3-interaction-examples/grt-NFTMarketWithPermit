@@ -1,4 +1,4 @@
-type NFTListed @entity(immutable: true) {
+type OrderBook @entity(immutable: true) {
   id: Bytes!
   tokenId: BigInt! # uint256
   seller: Bytes! # address
@@ -8,7 +8,7 @@ type NFTListed @entity(immutable: true) {
   transactionHash: Bytes!
 }
 
-type NFTSold @entity(immutable: true) {
+type FilledOrder @entity(immutable: true) {
   id: Bytes!
   tokenId: BigInt! # uint256
   seller: Bytes! # address
