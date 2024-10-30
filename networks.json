@@ -1,0 +1,8 @@
+{
+  "arbitrum-sepolia": {
+    "NFTMarketWithPermit": {
+      "address": "0x98A566801FF66d156971ADa3f6D729eFBABD67Ca",
+      "startBlock": 90951146
+    }
+  }
+}
