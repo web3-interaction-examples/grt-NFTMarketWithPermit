@@ -1,4 +1,4 @@
-import { Address } from "@graphprotocol/graph-ts"
+import { Address, BigInt } from "@graphprotocol/graph-ts"
 import {
   NFTListed as NFTListedEvent,
   NFTSold as NFTSoldEvent,
@@ -16,6 +16,8 @@ export function handleNFTListed(event: NFTListedEvent): void {
   entity.seller = event.params.seller
   entity.price = event.params.price
   entity.nftAddress = Address.fromString("0x32eCC13478b2d03b212AE7b371F5f3C18490Bc9d")
+  // timestamp + 1 hour
+  entity.deadline = event.block.timestamp.plus(BigInt.fromI32(3600))
 
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp
