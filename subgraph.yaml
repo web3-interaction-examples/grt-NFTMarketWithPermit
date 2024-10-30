@@ -18,10 +18,6 @@ dataSources:
       entities:
         - NFTListed
         - NFTSold
-        - NFTUnlisted
-        - OwnershipTransferred
-        - Refund
-        - WhitelistBuy
       abis:
         - name: NFTMarketWithPermit
           file: ./abis/NFTMarketWithPermit.json
@@ -30,12 +26,4 @@ dataSources:
           handler: handleNFTListed
         - event: NFTSold(indexed uint256,indexed address,indexed address,uint256)
           handler: handleNFTSold
-        - event: NFTUnlisted(indexed uint256)
-          handler: handleNFTUnlisted
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
-        - event: Refund(indexed address,uint256)
-          handler: handleRefund
-        - event: WhitelistBuy(indexed uint256,indexed address,uint256)
-          handler: handleWhitelistBuy
       file: ./src/nft-market-with-permit.ts
