@@ -1,5 +1,6 @@
 type OrderBook @entity(immutable: true) {
   id: Bytes!
+  nftAddress: Bytes! # address 
   tokenId: BigInt! # uint256
   seller: Bytes! # address
   price: BigInt! # uint256
@@ -10,6 +11,7 @@ type OrderBook @entity(immutable: true) {
 
 type FilledOrder @entity(immutable: true) {
   id: Bytes!
+  nftAddress: Bytes! # address
   tokenId: BigInt! # uint256
   seller: Bytes! # address
   buyer: Bytes! # address
