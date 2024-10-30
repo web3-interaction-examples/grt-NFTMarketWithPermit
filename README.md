@@ -29,3 +29,7 @@ graph auth --studio {KEY}
 ```
 graph deploy --studio tstnftmarket
 ```
+
+
+## Deployed API
+- https://api.studio.thegraph.com/query/93100/tstnftmarket/v0.0.2/graphql?query=query+MyQuery+%7B%0A++filledOrders+%7B%0A++++id%0A++%7D%0A++orderBooks+%7B%0A++++id%0A++++nftAddress%0A++++deadline%0A++++blockTimestamp%0A++++price%0A++++seller%0A++++tokenId%0A++++transactionHash%0A++++blockNumber%0A++%7D%0A%7D
